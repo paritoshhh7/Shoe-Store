@@ -41,8 +41,17 @@
     width: 130px;
 }
 
+.logo-div {
+    cursor: pointer;
+}
+
 li {
     list-style-type: none;
+    pointer: cursor;
+}
+
+.l-element {
+    cursor: pointer;
 }
 
 .cart {
