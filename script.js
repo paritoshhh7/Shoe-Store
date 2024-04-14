@@ -1,7 +1,11 @@
 const drop = document.getElementsByClassName('drop');
 let nav = true;
 
-// console.log(drop);
+// Logo refresh -------------->
+
+const logo = document.querySelector('.logo');
+logo.onclick = () => {document.location.reload()};
+
 
 drop[0].addEventListener("click", () => {
     // document.body.style = "background-color: red";
@@ -30,6 +34,38 @@ drop[0].addEventListener("click", () => {
 });
 
 // -------------------->
+
+// document.querySelector('.num-boxes').style = "background-color: #ff523b";
+
+const nextBoxes = document.querySelectorAll('.num-boxes');
+let  cl = 1;
+
+console.log(nextBoxes);
+
+nextBoxes.forEach((next) => {
+    addEventListener('click', (e) => {
+        
+        // if(e.target.id === 'nx-next')
+        // {   
+        //     console.log(`nx-${cl}`);
+        //     document.getElementById(`nx-${cl}`).style = "background-color: white";
+        //     // console.log(one);
+        //     document.getElementById(`nx-${cl}`).style = "background-color: #ff523b";
+        // } else 
+        {
+            console.log(e.target.id);
+        next.style = "background-color: white";
+        document.getElementById(e.target.id).style = "background-color: #ff523b";
+        }
+        
+        
+    })
+    // cl++;
+});
+
+fetch("https://fakestoreapi.com/products")
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 
 // let img = document.querySelectorAll('.ftr-box');
 // console.log(img);
